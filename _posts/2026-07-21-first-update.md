@@ -1,11 +1,13 @@
 ---
 layout: post
-title: "2026秋季服装趋势与新商开店实操指南"
+title: "2026秋季女装流行色彩趋势报告"
 categories: trend
-video_url: videos/test.mp4
-download_file: files/data.xlsx
 ---
-这里是你的正文内容...
+
+这是我们为您准备的最新趋势报告在线预览：
+
 <div style="margin: 20px 0; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
     <iframe src="../../files/THREE.pdf" width="100%" height="600px" style="border: none;"></iframe>
 </div>
+
+如需下载原文件，请点击下方的按钮。
