@@ -4,56 +4,72 @@
     <meta charset="UTF-8">
     <title>商家全周期赋能站点</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 900px; margin: 0 auto; padding: 30px 20px; background: #f4f6f9; color: #333; }
-        h1 { text-align: center; color: #1a1a1a; margin-bottom: 40px; }
-        .section { background: white; padding: 25px; margin-bottom: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
-        .section-title { border-left: 5px solid #007bff; padding-left: 12px; color: #1a1a1a; margin-top: 0; font-size: 1.4em; }
-        ul { list-style: none; padding: 0; margin: 0; }
-        li { padding: 15px 0; border-bottom: 1px solid #edf2f7; display: flex; justify-content: space-between; align-items: center; }
-        li:last-child { border-bottom: none; }
-        .date { color: #718096; font-size: 0.9em; }
-        a { color: #007bff; text-decoration: none; font-weight: 500; font-size: 1.1em; }
-        a:hover { color: #0056b3; text-decoration: underline; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f5f7fa; margin: 0; padding: 40px; color: #333; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .header { text-align: center; font-size: 28px; font-weight: bold; margin-bottom: 40px; }
+        .section-box { background: white; border-radius: 12px; padding: 24px; margin-bottom: 24px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .section-title { font-size: 20px; font-weight: bold; color: #0076ff; margin-bottom: 16px; border-left: 4px solid #0076ff; padding-left: 10px; display: flex; align-items: center; }
+        .post-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px dashed #eee; }
+        .post-item:last-child { border-bottom: none; }
+        .post-title { font-size: 16px; color: #333; text-decoration: none; font-weight: 500; }
+        .post-title:hover { color: #0076ff; }
+        .post-date { font-size: 14px; color: #999; }
+        .no-post { color: #999; font-size: 14px; font-style: italic; }
     </style>
 </head>
 <body>
 
-    <h1>🚀 商家全周期赋能站点</h1>
+<div class="container">
+    <div class="header">🚀 商家全周期赋能站点</div>
 
-    <!-- 👗 板块一：服装趋势更新 -->
-    <div class="section">
-        <h2 class="section-title">👗 服装趋势更新</h2>
-        <ul id="trend-list">
-            <!-- 💡 以后有新的趋势更新，就照着下面这一行复制粘贴，改个名字 -->
-            <li>
-                <a href="page_trend1.html">2026秋季女装流行色彩趋势报告</a>
-                <span class="date">2026-07-21</span>
-            </li>
-        </ul>
+    <!-- 板块一：服装趋势更新 -->
+    <div class="section-box">
+        <div class="section-title">👗 服装趋势更新</div>
+        {% assign trend_posts = site.posts | where: "categories", "trend" %}
+        {% if trend_posts.size > 0 %}
+            {% for post in trend_posts %}
+            <div class="post-item">
+                <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+            </div>
+            {% endfor %}
+        {% else %}
+            <div class="no-post">暂无趋势报告更新</div>
+        {% endif %}
     </div>
 
-    <!-- 🔰 板块二：新商指南 -->
-    <div class="section">
-        <h2 class="section-title">🔰 新商指南</h2>
-        <ul id="guide-list">
-            <li>
-                <a href="page_guide1.html">2026新商家开店保姆级实操指南</a>
-                <span class="date">2026-07-21</span>
-            </li>
-        </ul>
+    <!-- 板块二：新商指南 -->
+    <div class="section-box">
+        <div class="section-title">🔰 新商指南</div>
+        {% assign guide_posts = site.posts | where: "categories", "guide" %}
+        {% if guide_posts.size > 0 %}
+            {% for post in guide_posts %}
+            <div class="post-item">
+                <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+            </div>
+            {% endfor %}
+        {% else %}
+            <div class="no-post">暂无新商指南更新</div>
+        {% endif %}
     </div>
 
-    <!-- 📈 板块三：商家进阶 -->
-    <div class="section">
-        <h2 class="section-title">📈 商家进阶必备</h2>
-        <ul id="advanced-list">
-            <li>
-                <a href="page_advanced1.html">破局千次观看：短视频爆款起量课</a>
-                <span class="date">2026-07-20</span>
-            </li>
-        </ul>
+    <!-- 板块三：商家进阶必备 -->
+    <div class="section-box">
+        <div class="section-title">📈 商家进阶必备</div>
+        {% assign advanced_posts = site.posts | where: "categories", "advanced" %}
+        {% if advanced_posts.size > 0 %}
+            {% for post in advanced_posts %}
+            <div class="post-item">
+                <a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+            </div>
+            {% endfor %}
+        {% else %}
+            <div class="no-post">暂无进阶必备课程</div>
+        {% endif %}
     </div>
+</div>
 
 </body>
 </html>
-
