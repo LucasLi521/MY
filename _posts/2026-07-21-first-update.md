@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "2026秋季服装趋势与新商开店实操指南"
-categories: guide
+categories: trend
 video_url: videos/test.mp4
 download_file: files/data.xlsx
 ---
