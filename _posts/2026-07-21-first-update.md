@@ -10,8 +10,10 @@ download_file: files/data.xlsx
 ### 👗 一、服装趋势前瞻
 今年秋季的核心趋势是复古极简风。商家在选品时可以重点关注大地色系。
 <div style="margin: 20px 0; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
-    <iframe src="/MY/files/7月背心开发指南.pdf" width="100%" height="600px" style="border: none;">
-        您的浏览器不支持在线预览 PDF，请点击下方按钮下载查看。
+   <iframe src="/MY/files/%E4%B8%83%E6%9C%88%E8%83%8C%E5%BF%83%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97.pdf" width="100%" height="600px" style="border: none;">
+    您的浏览器不支持在线预览 PDF，请点击下方按钮下载查看。
+</iframe>
+
     </iframe>
 </div>
 
