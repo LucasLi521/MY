@@ -20,44 +20,40 @@
 
     <h1>🚀 商家全周期赋能站点</h1>
 
-    <!-- 板块一：服装趋势更新 -->
+    <!-- 👗 板块一：服装趋势更新 -->
     <div class="section">
         <h2 class="section-title">👗 服装趋势更新</h2>
-        <ul>
-            {% for post in site.categories.trend %}
+        <ul id="trend-list">
+            <!-- 💡 以后有新的趋势更新，就照着下面这一行复制粘贴，改个名字 -->
             <li>
-                <a href="{{ post.url }}">{{ post.title }}</a>
-                <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
+                <a href="page_trend1.html">2026秋季女装流行色彩趋势报告</a>
+                <span class="date">2026-07-21</span>
             </li>
-            {% endfor %}
         </ul>
     </div>
 
-    <!-- 板块二：新商指南 -->
+    <!-- 🔰 板块二：新商指南 -->
     <div class="section">
         <h2 class="section-title">🔰 新商指南</h2>
-        <ul>
-            {% for post in site.categories.guide %}
+        <ul id="guide-list">
             <li>
-                <a href="{{ post.url }}">{{ post.title }}</a>
-                <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
+                <a href="page_guide1.html">2026新商家开店保姆级实操指南</a>
+                <span class="date">2026-07-21</span>
             </li>
-            {% endfor %}
         </ul>
     </div>
 
-    <!-- 板块三：商家进阶 -->
+    <!-- 📈 板块三：商家进阶 -->
     <div class="section">
         <h2 class="section-title">📈 商家进阶必备</h2>
-        <ul>
-            {% for post in site.categories.advanced %}
+        <ul id="advanced-list">
             <li>
-                <a href="{{ post.url }}">{{ post.title }}</a>
-                <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
+                <a href="page_advanced1.html">破局千次观看：短视频爆款起量课</a>
+                <span class="date">2026-07-20</span>
             </li>
-            {% endfor %}
         </ul>
     </div>
 
 </body>
 </html>
+
